@@ -1,207 +1,192 @@
-#Front-end Job Interview Questions
+#Questões para entrevista de profissionais Front-end
 
-This file contains a number of front-end interview questions that can be used when vetting potential candidates. It is by no means recommended to use every single question here on the same candidate (that would take hours). Choosing a few items from this list should help you vet the intended skills you require.
+Este repositório contém uma série de perguntas para entrevista de profissionais de front-end que podem ser usadas para avaliar os candidatos. Não é recomendado de maneira alguma usar todas as perguntas aqui no mesmo candidato (que levaria horas). A escolha de alguns itens dessa lista deverá ajudar a identificar as habilidades requeridas do candidato.
 
-**Note:** Keep in mind that many of these questions are open-ended and could lead to interesting discussions that tell you more about the person's capabilities than a straight answer would.
+O artigo [Baseline For Front-End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/) de [Rebecca Murphey](http://rmurphey.com/) é também uma ótima fonte para ler antes de entrevistar um candidato.
 
-## Table of Contents
+**Note:** Tenha em mente que muitas destas questões estão em aberto e poderia levar à discussões interessantes que dizem mais sobre as capacidades do candidato do que a resposta em si.
 
-  1. [General Questions](#general-questions)
-  1. [HTML Questions](#html-questions)
-  1. [CSS Questions](#css-questions)
-  1. [JS Questions](#js-questions)
-  1. [Testing Questions](#testing-questions)
-  1. [Performance Questions](#performance-questions)
-  1. [Network Questions](#network-questions)
-  1. [Coding Questions](#coding-questions)
-  1. [Fun Questions](#fun-questions)
+## <a name='toc'>Tabela de Conteúdos</a>
 
-## Getting Involved
+  1. [Contribuintes Originais](#contributors)
+  1. [Questões Gerais](#general)
+  1. [Questões de HTML](#html)
+  1. [Questões de CSS](#css)
+  1. [Questões de JS](#js)
+  1. [Questões de jQuery](#jquery)
+  1. [Questões de Código](#jscode)
+  1. [Questões Divertidas](#fun)
+  1. [Outras Grandes Referências](#references)
+  1. [Licença](#license)
 
-  1. [Contributors](#contributors)
-  1. [How to Contribute](https://github.com/h5bp/Front-end-Developer-Interview-Questions/blob/master/CONTRIBUTING.md)
-  1. [License](https://github.com/h5bp/Front-end-Developer-Interview-Questions/blob/master/LICENSE.md)
+####[[⬆]](#toc) <a name='contributors'>Contribuintes originais:</a>
 
-#### General Questions:
+A maiorida das questões foram retiradas de um _thread_da [oksoclap](http://oksoclap.com/) originalmente criada por [Paul Irish](http://paulirish.com) ([@paul_irish](http://twitter.com/paul_irish)) e com a contribuição das seguintes pessoas: [@bentruyman](http://twitter.com/bentruyman) [@cowboy](http://twitter.com/cowboy) [@ajpiano](http://ajpiano)  [@SlexAxton](http://twitter.com/slexaxton) [@boazsender](http://twitter.com/boazsender) [@miketaylr](http://twitter.com/miketaylr) [@vladikoff](http://twitter.com/vladikoff) [@gf3](http://twitter.com/gf3) [@jon_neal](http://twitter.com/jon_neal) [@sambreed](http://twitter.com/sambreed) [@iansym](http://twitter.com/iansym)
 
-* What did you learn yesterday/this week?
-* What excites or interests you about coding?
-* What is a recent technical challenge you experienced and how did you solve it?
-* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
-* Talk about your preferred development environment.
-* Which version control systems are you familiar with?
-* Can you describe your workflow when you create a web page?
-* If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation?
-* How would you optimize a website's assets/resources?
-* How many resources will a browser download from a given domain at a time?
-  * What are the exceptions?
-* Name 3 ways to decrease page load (perceived or actual load time).
-* If you jumped on a project and they used tabs and you used spaces, what would you do?
-* Describe how you would create a simple slideshow page.
-* If you could master one technology this year, what would it be?
-* Explain the importance of standards and standards bodies.
-* What is Flash of Unstyled Content? How do you avoid FOUC?
-* Explain what ARIA and screenreaders are, and how to make a website accessible.
-* Explain some of the pros and cons for CSS animations versus JavaScript animations.
-* What does CORS stand for and what issue does it address?
+####[[⬆]](#toc) <a name='general'>Questões Gerais:</a>
 
-#### HTML Questions:
+* O que você aprendeu ontem ou esta semana?
+* O que te excita ou te interessa em programação/codificação?
+* Quais as suas considerações sobre UI, Segurança, Perfomance, Aplicação, Manutenibilidade  ou Tecnologia quando você desenvolve uma aplicação web ou site?
+* Fale sobre seu ambiente de desenvolvimento preferido. (SO, Editor, Browser, Ferramentas, etc.)
+* Com quais sistemas de controle de versão você é familiar?
+* Descreva seu trabalho quando cria uma página web.
+* Se você tivesse 5 diferentes arquivos de folhas de estilo, qual seria a melhor forma de integrá-los no site?
+  * Concatenação de arquivos
+* Descreva a diferença entre _progressive enhancement_ and _graceful degradation_.
+  * Bônus se descrever ou mencionar detecção de recursos.
+* Como você pode otimizar os recursos de um site?
+  * À procura de uma série de soluções que possam incluir:
+    * Concatenação de arquivo
+    * "Minificação" de arquivo
+    * Utilização de CDN
+    * Caching
+    * etc.
+* Por que é melhor servir recursos de um site de múltiplos domínios?
+  * Quantos recursos um navegador pode baixar, simultaneamente, a partir de um determinado domínio?
+  * O que são *exceptions*?
+    * Bônus para identificação mobile como uma possível desvantagem (http://www.mobify.com/blog/domain-sharding-bad-news-mobile-performance/)
+    * Bônus para identicação de HTTP2 / SPDY como uma *exception*
+* Fale 3 formas de diminuir o _page load_ (tempo de carregamento real e percebido)
+* Se você caísse em um projeto que as pessoas usam _tabs_ para indentação e você usa espaços, o que você faria?
+  * Sugerir que o projeto utilize algo como EditorConfig (http://editorconfig.org)
+  * Se conformar com as convenções (ficar consistente)
+  * `issue :retab! command`
+* Escreva uma página simples de _slideshow_
+  * Bônus se não usar JS.
+* Quais ferramentas você usa para testar a performance do seu código?
+  * Profiler, JSPerf, Dromaeo
+* Se você pudesse dominar uma tecnologia deste ano, qual seria?
+* Quais as diferenças entre *Long-Polling*, *Websockets* and *SSE*?
+* Explique a importância de normas e órgãos normativos.
+* O que é FOUC? Como você evita FOUC?
+* Dê a sua melhor descrição do processo do momento que você digita a URL de um website até o final do carregamento da página na sua tela.
 
-* What does a `doctype` do?
-* What's the difference between standards mode and quirks mode?
-* What's the difference between HTML and XHTML?
-* Are there any problems with serving pages as `application/xhtml+xml`?
-* How do you serve a page with content in multiple languages?
-* What kind of things must you be wary of when design or developing for multilingual sites?
-* What are `data-` attributes good for?
-* Consider HTML5 as an open web platform. What are the building blocks of HTML5?
-* Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-* Describe the difference between `<script>`, `<script async>` and `<script defer>`.
-* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
-* What is progressive rendering?
-* Have you used different HTML templating languages before?
+####[[⬆]](#toc) <a name='html'>Questões de HTML:</a>
 
-#### CSS Questions:
+* O que um `doctype` faz?
+* Qual a diferença entre _standards mode_ e _quirks mode_?
+* Quais as limitações quando utilizamos páginas XHTML?
+  * Existe algum problema em utilizar páginas como `application/xhtml+xml`?
+* Como você desenvolve uma página com conteúdo em múltiplos idiomas?
+  * Que tipo de coisas que você deve tomar cuidado ao desenvolver um website multi-língua?
+* Quais são os benefícios em utilizar o atributo `data-`?
+* Considere o HTML5 como uma plataforma web aberta. Quais são os blocos de construção de HTML5?
+* Descreva a diferença entre cookies, sessionStorage e localStorage.
+* Você pode explicar a diferença entre `GET` e `POST`?
 
-* What is the difference between classes and ID's in CSS?
-* What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
-* Describe Floats and how they work.
-* Describe z-index and how stacking context is formed.
-* Describe BFC(Block Formatting Context) and how it works.
-* What are the various clearing techniques and which is appropriate for what context?
-* Explain CSS sprites, and how you would implement them on a page or site.
-* What are your favourite image replacement techniques and which do you use when?
-* How would you approach fixing browser-specific styling issues?
-* How do you serve your pages for feature-constrained browsers?
-  * What techniques/processes do you use?
-* What are the different ways to visually hide content (and make it available only for screen readers)?
-* Have you ever used a grid system, and if so, what do you prefer?
-* Have you used or implemented media queries or mobile specific layouts/CSS?
-* Are you familiar with styling SVG?
-* How do you optimize your webpages for print?
-* What are some of the "gotchas" for writing efficient CSS?
-* What are the advantages/disadvantages of using CSS preprocessors?
-  * Describe what you like and dislike about the CSS preprocessors you have used.
-* How would you implement a web design comp that uses non-standard fonts?
-* Explain how a browser determines what elements match a CSS selector.
-* Describe pseudo-elements and discuss what they are used for. 
-* Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
-* What does ```* { box-sizing: border-box; }``` do? What are its advantages?
-* List as many values for the display property that you can remember.
-* What's the difference between inline and inline-block?
-* What's the difference between a relative, fixed, absolute and statically positioned element?
-* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
-* What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
-* Have you played around with the new CSS Flexbox or Grid specs?
-* How is responsive design different from adaptive design?
-* Have you ever worked with retina graphics? If so, when and what techniques did you use?
-* Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
+####[[⬆]](#toc) <a name='css'>Questões de CSS:</a>
 
-#### JS Questions:
+* Qual é a diferença entre classes e IDs no CSS?
+* Descreva o que é o arquivo "reset" do CSS e o que ele faz e como ele é útil.
+  * Bônus para identicação das desvantagens de um *reset* e/ou mencionar *normalize* como uma melhor alternativa.
+* Descreva o que são Floats e como eles funcionam.
+* Descreva z-index e como o empilhamento do contexto é formado.
+* Quais são as várias técnicas para "clearing" e quais delas são apropriadas para qual contexto?
+* Explique o que são CSS Sprites, e como você implementaria eles em um website.
+* Quais são suas técnicas favoritas para troca de imagens e quais dela você usa.
+* CSS Hacks, arquivo condicional .css, ou... alguma outra coisa?
+* Como você desenvolve sua página para browsers com recursos limitados?
+  * Quais técnicas/processos você usa?
+* Quais são as diferentes formas de visualizar conteúdo escondido (e como fazer para deixar eles disponíveis apenas para leitores de tela?)
+* Você já utilizou algum sistema de grid, se sim, qual você prefere?
+* Você já utilizou ou implementou media queries ou CSSs específicos para mobile?
+* Qual sua familiaridade com SVG?
+* Como você optimiza suas páginas para impressão?
+* Quais são algumas técnicas para escrever um eficiente CSS?
+* Você já utilizou pré-processadores CSS? (SASS, Compass, Stylus, LESS)
+  * Se sim, descreva o que você gostou e o que não gostou com eles.
+* Como você implementaria um website que não utilizaria fontes padrões nos computadores?
+  * Webfonts (Serviços como: Google Webfonts, Typekit, etc.)
+* Explique como um browser determina quais os elementos que correspondem a um seletor CSS.
+*  Explique o que você entende sobre *box model* e como você poderia dizer para o navegador en CSS para renderizar seu layout em diferentes *box models*.
+* O que ```* { box-sizing: border-box; }``` faz? Quais são as vantagens?
+* Liste quantas propriedades *display* você puder lembrar.
+* Qual a diferença entre inline e inline-block?
+* Qual a diferença entre elementos posicionados de forma relativa, fixa, absoluta e estática?
+* Quais frameworks CSS você tem usado localmente ou em produção? (Bootstrap, PureCSS, Foundation, etc.)
+  * Se sim, quais deles? Se você puder, como você mudaria/melhoraria ele(s)?
+* Você já brincou com as novas especificações de CSS Flexbox e CSS Grid?
+* Como o design responsivo é diferente do design adaptavel?
+* Você já trabalhou com gráficos retina? Se sim, quando e quais técnicas você usou?
 
-* Explain event delegation
-* Explain how `this` works in JavaScript
-* Explain how prototypal inheritance works
-* What do you think of AMD vs CommonJS?
-* Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
-  * What needs to be changed to properly make it an IIFE?
-* What's the difference between a variable that is: `null`, `undefined` or undeclared?
-  * How would you go about checking for any of these states?
-* What is a closure, and how/why would you use one?
-* What's a typical use case for anonymous functions?
-* How do you organize your code? (module pattern, classical inheritance?)
-* What's the difference between host objects and native objects?
-* Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-* What's the difference between `.call` and `.apply`?
-* Explain `Function.prototype.bind`.
-* When would you use `document.write()`?
-* What's the difference between feature detection, feature inference, and using the UA string?
-* Explain AJAX in as much detail as possible.
-* Explain how JSONP works (and how it's not really AJAX).
-* Have you ever used JavaScript templating?
-  * If so, what libraries have you used?
-* Explain "hoisting".
-* Describe event bubbling.
-* What's the difference between an "attribute" and a "property"?
-* Why is extending built-in JavaScript objects not a good idea?
-* Difference between document load event and document ready event?
-* What is the difference between `==` and `===`?
-* Explain the same-origin policy with regards to JavaScript.
-* Make this work:
+####[[⬆]](#toc) <a name='js'>Questões de JS:</a>
+
+* Explique o evento _delegation_.
+* Explique como `this` funciona em JavaScript.
+* Explique como funciona herança prototipada.
+* Como você testa seu JavaScript?
+* AMD vs. CommonJS?
+* Explique por que a seguinte função não funciona como uma IIFE: `function foo(){ }();`.
+  * O que precisa ser alterado para se tornar uma IIFE?
+* Qual a diferença entre uma variável que `null`,  `undefined` ou `undeclared`?
+  * Como você verificaria esses estados?
+* O que é uma _closure_, e como/por que você usaria uma?
+* Qual o caso de uso típico para funções anônimas?
+* Como você organiza seu código? (module pattern, herança clássica?)
+* Qual a diferença entre objetos herdados e objetos nativos?
+ Qual a diferença entre: `function Person(){}`, `var person = Person()`, e `var person = new Person()`?
+* Qual a diferença entre `.call` e `.apply`?
+* Explique `Function.prototype.bind`.
+* Quando você otimiza seu código?
+* Você pode explicar como funciona a herença no Javascript?
+* Quando você deve usar o `document.write()`?
+  * A maioria dos anúncios de publicidade ainda utilizam `document.write()` embora seu uso não seja recomendado.
+* Qual a diferença entre feature detection, feature inference, e o uso de UA string?
+* Explique o que é AJAX o mais detalhadamente possível.
+* Explique como o JSONP funciona (e como ele realmente não é AJAX).
+* Você já utilizou templates com Javascript?
+  * Se sim, quais bibliotecas foram utilizadas? (Mustache.js, Handlebars, etc.)
+* Explique o que é "hoisting".
+* Descreva o que é event bubbling.
+* Qual a diferença entre "atributo" e "propriedade"?
+* Porque a extensão de objetos nativos não é uma boa ideia?
+* Qual a diferença entre o evento document load e o evento document ready?
+* Qual a diferença entre `==` e `===`?
+* Explique como você pega um parâmetro na URL do browser.
+* Explique a política de _same-origin_ em relação a Javascript.
+* Faça isso funcionar:
 ```javascript
-duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
+[1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
 ```
-* Why is it called a Ternary expression, what does the word "Ternary" indicate?
-* What is `"use strict";`? what are the advantages and disadvantages to using it?
-* Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
-* Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
-* Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
-* Explain what a single page app is and how to make one SEO-friendly.
-* What is the extent of your experience with Promises and/or their polyfills?
-* What are the pros and cons of using Promises instead of callbacks?
-* What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
-* What tools and techniques do you use debugging JavaScript code?
-* What language constructions do you use for iterating over object properties and array items?
-* Explain the difference between mutable and immutable objects.
-  * What is an example of an immutable object in JavaScript?
-  * What are the pros and cons of immutability?
-  * How can you achieve immutability in your own code?
-* Explain the difference between synchronous and asynchronous functions.
-* What is event loop?
-  * What is the difference between call stack and task queue?
+* O que é um operador ternário, o que a palavra "ternário" indica/significa?
+* O que é o `"use strict";`? Quais a vantagens e desvantagens de sua utilização?
+* Crie um loop for que itere até `100` enquanto retorn **fizz** em múltiplos de `3`, **buzz** em múltiplos de `5` e **fizzbuzz** em múltiplos de `3` e `5`.
 
-#### Testing Questions:
+####[[⬆]](#toc) <a name='jquery'>Questões de jQuery:</a>
 
-* What are some advantages/disadvantages to testing your code?
-* What tools would you use to test your code's functionality?
-* What is the difference between a unit test and a functional/integration test?
-* What is the purpose of a code style linting tool?
+* Explique "chaining".
+* Explique "deferreds".
+* Quais são algumas otimizações de jQuery que você pode implementar?
+* O que `.end()` faz?
+* Nomeie 4 valores diferentes que você pode passar para um método jQuery.
+  * Seletor (string), HTML (string), Callback (function), HTMLElement, object, array, elemento de array, jQuery Object, etc.
+* Qual a diferença entre `.get()`, `[]`, e `.eq()`?
 
-#### Performance Questions:
+####[[⬆]](#toc) <a name='jscode'>Questões de código:</a>
 
-* What tools would you use to find a performance bug in your code?
-* What are some ways you may improve your website's scrolling performance?
-* Explain the difference between layout, painting and compositing.
-
-#### Network Questions:
-
-* Traditionally, why has it been better to serve site assets from multiple domains?
-* Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
-* What are the differences between Long-Polling, Websockets and Server-Sent Events?
-* Explain the following request and response headers:
-  * Diff. between Expires, Date, Age and If-Modified-...
-  * Do Not Track
-  * Cache-Control
-  * Transfer-Encoding
-  * ETag
-  * X-Frame-Options
-* What are HTTP actions? List all HTTP actions that you know, and explain them.
-
-#### Coding Questions:
-
-*Question: What is the value of `foo`?*
-```javascript
-var foo = 10 + '20';
-```
-
-*Question: How would you make this work?*
+*Questão: Como você faria isso funcionar?*
 ```javascript
 add(2, 5); // 7
 add(2)(5); // 7
 ```
 
-*Question: What value is returned from the following statement?*
-```javascript
-"i'm a lasagna hog".split("").reverse().join("");
-```
 
-*Question: What is the value of `window.foo`?*
+*Questão: Qual valor é retornado da seguinte declaração?*
+```javascript
+"sou uma lasanha".split("").reverse().join("");
+```
+**Resposta: "ahnasal amu uos"**
+
+
+*Questão: Qual é o valor de `window.foo`?*
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
 ```
+**Resposta: "bar"** *(apenas se window.foo for falso, se não ele vai retornar o seu valor próprio).*
 
-*Question: What is the outcome of the two alerts below?*
+
+*Questão: Qual o retorno dos dois alerts abaixo?*
 ```javascript
 var foo = "Hello";
 (function() {
@@ -210,41 +195,35 @@ var foo = "Hello";
 })();
 alert(foo + bar);
 ```
+**Resposta: "Hello World" & ReferenceError: bar is not defined**
 
-*Question: What is the value of `foo.length`?*
+
+*Questão: Qual o valor de `foo.length`?*
 ```javascript
 var foo = [];
 foo.push(1);
 foo.push(2);
 ```
+**Resposta: `2`**
 
-*Question: What is the value of `foo.x`?*
-```javascript
-var foo = {n: 1};
-var bar = foo;
-foo.x = foo = {n: 2};
-```
+####[[⬆]](#toc) <a name='fun'>Questões Divertidas:</a>
 
-*Question: What does the following code print?*
-```javascript
-console.log('one');
-setTimeout(function() {
-  console.log('two');
-}, 0);
-console.log('three');
-```
+* Qual a coisa mais legal que você desenvolveu recentement? Qual você ficou mais orgulhoso?
+* Quais suas partes favoritas sobre as ferramentas de desenvolvimento que você usa?
+* Você teve algum projeto para animais de estimação? Qual tipo?
+* Qual sua feature favorita do Internet Explorer?
 
-#### Fun Questions:
+####[[⬆]](#toc) <a name='references'>Outras Grandes Referências:</a>
 
-* What's a cool project that you've recently worked on?
-* What are some things you like about the developer tools you use?
-* Do you have any pet projects? What kind?
-* What's your favorite feature of Internet Explorer?
-* How do you like your coffee?
+* http://programmers.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before
+* http://www.nczonline.net/blog/2010/01/05/interviewing-the-front-end-engineer/
+* http://css-tricks.com/interview-questions-css/
+* http://davidshariff.com/quiz/
+* http://blog.sourcing.io/interview-questions
+* http://www.toptal.com/javascript/interview-questions
+* http://www.sitepoint.com/5-typical-javascript-interview-exercises/
+* http://www.sitepoint.com/5-javascript-interview-exercises/
 
+####[[⬆]](#toc) <a name='license'>Licença:</a>
 
-#### Contributors:
-
-This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
-
-It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
+Lançado sobre a [Licença MIT](http://opensource.org/licenses/MIT). Veja o arquivo LICENSE para detalhes.
